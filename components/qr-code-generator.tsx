@@ -21,7 +21,7 @@ export function QrCodeGenerator({ currentStep, setCurrentStep }: QrCodeGenerator
   const [exportFormat, setExportFormat] = useState<"png" | "svg">("png")
   const [isLoading, setIsLoading] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
-  const qrCodeRef = useRef<HTMLDivElement>(null)
+  const qrCodeRef = useRef<HTMLDivElement>(null!)
 
   const handleUrlSubmit = (submittedUrl: string) => {
     setUrl(submittedUrl)
